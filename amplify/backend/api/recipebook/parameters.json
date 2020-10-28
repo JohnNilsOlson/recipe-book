@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "recipebook",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authrecipebook27f2b4b7",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

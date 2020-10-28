@@ -1,0 +1,20 @@
+type Recipe @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  name: String!
+  description: String
+  category: String 
+  ingredients: [Ingredient]
+  instructions: [Instruction]
+}
+
+type Ingredient {
+  recipeid: ID!
+  name: String!
+  amount: Int!
+}
+
+type Instruction {
+  recipeid: ID!
+  step: Int!
+  description: String!
+}
