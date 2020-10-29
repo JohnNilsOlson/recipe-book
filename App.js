@@ -10,7 +10,8 @@ import SignIn from './src/screens/SignIn';
 import SignUp from './src/screens/SignUp';
 import ConfirmSignUp from './src/screens/ConfirmSignUp';
 import AddRecipe from './src/screens/AddRecipe';
-import RecipeDetails from './src/screens/RecipeDetails'
+import RecipeDetails from './src/screens/RecipeDetails';
+import AddIngredients from './src/screens/AddIngredients';
 
 Amplify.configure(config);
 
@@ -41,6 +42,7 @@ const AppNavigator = props => {
       </AppStack.Screen>
       <AppStack.Screen name='AddRecipe' component={AddRecipe} options={{ title: 'Add New Recipe'}} />
       <AppStack.Screen name='RecipeDetails' component={RecipeDetails} options={{ title: 'Recipe Details'}} />
+      <AppStack.Screen name='AddIngredients' component={AddIngredients} options={{ title: 'Add Ingredient'}} />
     </AppStack.Navigator>
   );
 }

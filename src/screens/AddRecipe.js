@@ -51,20 +51,8 @@ export default function AddRecipe({ navigation }) {
           onChangeText={text => setDescription(text)}
           placeholder='Add Description'
         />
-        {/* <TextInput
-          style={styles.input}
-          value={ingredients}
-          onChangeText={text => setIngredients([...ingredients, text])}
-          placeholder='Add Ingredient'
-        />
-        <TextInput
-          style={styles.input}
-          value={instructions}
-          onChangeText={text => setInstructions([...instructions, text])}
-          placeholder='Add Instruction'
-        /> */}
-        <TouchableOpacity onPress={addRecipe} style={styles.buttonContainer}>
-          <Text style={styles.buttonText}>Add Recipe</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('AddIngredients')} style={styles.buttonContainer}>
+          <Text style={styles.buttonText}>Add Ingredients To Recipe</Text>
         </TouchableOpacity>
       </ScrollView>
     </View>
